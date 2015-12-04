@@ -1,0 +1,20 @@
+package tasks2;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.net.URL;
+import javax.imageio.ImageIO;
+
+public class Foto {
+
+	public static void main(String[] args) throws Exception {
+		BufferedImage image = null;
+		URL url = new URL("http://sevidi.ru/javascript/images/java39.gif");
+		image = ImageIO.read(url);
+		if (image != null) {
+			ImageIO.write(image, "gif", new File("D:\\java39.gif"));
+		}
+
+	}
+
+}
