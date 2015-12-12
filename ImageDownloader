@@ -1,0 +1,17 @@
+package tasks2;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class ImageDownloader
+{
+    public static void main(String[] arguments) throws IOException
+    {
+    	try(InputStream in = new URL("http://cs537601.vk.me/u67337697/docs/28c2150b4059/1389512468_1871032202.gif").openStream()){
+    	    Files.copy(in, Paths.get("D:/image.gif"));
+    	}
+    }
+}
